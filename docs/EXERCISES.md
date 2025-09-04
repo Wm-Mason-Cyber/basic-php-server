@@ -51,3 +51,21 @@ single lab session (30–60 minutes) to teach reflected XSS.
 - Explore HTML-encoding differences, attribute contexts, and event handler
 	injection.
 - Research other web security topics: SQLi, CSRF, authentication issues.
+
+## New demos: Stored XSS and SQL Injection
+
+Stored XSS:
+- Visit `Stored-XSS (Vuln)` and `Stored-XSS (Safe)` from the navigation.
+- Post a message containing `<script>alert('XSS')</script>` to the vulnerable board
+  and observe the alert appear for any subsequent page viewers.
+- Compare to the safe board, which escapes output and shows the payload as text.
+
+SQL Injection:
+- Visit `SQLi (Vuln)` and `SQLi (Safe)`.
+- Try searching for a name like `Alice` and then try a classic test such as
+  `%' OR '1'='1` in the vulnerable page to see how naive concatenation can
+  change the query results. Discuss why the safe page using prepared
+  statements prevents this.
+
+Instructor note: both demos use a local `data/` directory and an SQLite file. The
+data is isolated to the project directory; remove `data/` to reset state.

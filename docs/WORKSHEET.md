@@ -56,3 +56,19 @@ Extension ideas
 - Discuss DOM-based XSS vs reflected and stored XSS.
 - Show how to use browser developer tools to inspect the DOM and network
   requests when testing payloads.
+
+## New Exercises: Stored XSS and SQL Injection (optional)
+
+Stored XSS (10 minutes)
+- Open `Stored-XSS (Vuln)` and submit a message containing `<script>alert("XSS")</script>`.
+- Refresh the page or visit from another browser session to see the stored payload execute.
+- Open `Stored-XSS (Safe)` and post the same message; note that the payload is shown as text and does not execute.
+
+SQL Injection (10 minutes)
+- Open `SQLi (Vuln)` and search for `Alice` to see normal results.
+- Try the input: `%' OR '1'='1` in the vulnerable page; observe that it may return all rows.
+- Repeat the same input on `SQLi (Safe)` and observe that prepared statements prevent the injection.
+
+Teacher notes
+- Both demos use a `data/` folder and lightweight storage (JSON and SQLite). Reset the lab between groups by deleting the `data/` folder.
+- Emphasize that these are local, controlled demonstrations designed to show concepts rather than real-world attack vectors.

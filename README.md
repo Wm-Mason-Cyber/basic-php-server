@@ -13,6 +13,9 @@ This repository provides:
 	or absence of XSS, and a small fixture to build and run the container while
 	tests execute.
 - Classroom-ready documentation and a printable lesson worksheet in `docs/`.
+ - A small PHP helpers library (`src/helpers.php`), a CLI demo script
+	 (`bin/demoscript.php`), and a tiny API endpoint (`site/api.php`) that
+	 demonstrate safe escaping and simple PHP patterns for students.
 
 Why this exists
 - Teach how PHP and Apache serve dynamic content.
