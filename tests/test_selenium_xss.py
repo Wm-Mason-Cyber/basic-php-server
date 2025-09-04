@@ -36,7 +36,7 @@ def test_navigation(driver):
         pass
     driver.get(BASE + 'index.php')
     nav_links = driver.find_elements(By.CSS_SELECTOR, 'nav a')
-    expected = ['Home', 'About', 'Contact', 'Vulnerable', 'Safe']
+    expected = ['Home', 'About', 'Contact', 'Vulnerable', 'Safe', 'Stored-XSS (Vuln)', 'Stored-XSS (Safe)', 'SQLi (Vuln)', 'SQLi (Safe)', 'API']
     actual = [a.text for a in nav_links]
     assert actual == expected, f"Navigation links mismatch: {actual}"
 
