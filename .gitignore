@@ -1,0 +1,32 @@
+# PHP
+*.log
+*.cache
+*.tmp
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+.env
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Node/npm (if used)
+node_modules/
+
+# OS
+Thumbs.db
+
+# Python venv and requirements
+venv/
+__pycache__/
+.python-version
+*.pyc
+*.pyo
+*.pyd
+requirements.txt
